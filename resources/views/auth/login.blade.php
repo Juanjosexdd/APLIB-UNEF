@@ -14,7 +14,7 @@
 
             <div>
                 <x-label for="identification_card" value="{{ __('Cedula') }}" />
-                <x-input id="identification_card" class="block mt-1 w-full" type="text" name="identification_card" :value="old('identification_card')" required
+                <x-input id="identification_card" class="block mt-1 w-full" type="number" name="identification_card" :value="old('identification_card')" required
                     autofocus autocomplete="identification_card" />
             </div>
 

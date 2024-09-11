@@ -52,7 +52,7 @@
                                     Nombres
                                 </label>
 
-                                <input id="name" type="text" name="name" :value="old('name')" required
+                                <x-input id="name" type="text" name="name" :value="old('name')" required
                                     autofocus autocomplete="name"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                             </div>
@@ -61,7 +61,7 @@
                                     Apellidos
                                 </label>
 
-                                <input id="lastname" type="text" name="lastname" :value="old('lastname')" required
+                                <x-input id="lastname" type="text" name="lastname" :value="old('lastname')" required
                                     autofocus autocomplete="lastname"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                             </div>
@@ -83,7 +83,7 @@
                                     Cedula
                                 </label>
 
-                                <input id="identification_card" type="text" name="identification_card"
+                                <x-input id="identification_card" type="number" name="identification_card"
                                     :value="old('identification_card')" required autofocus
                                     autocomplete="identification_card"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
@@ -92,7 +92,7 @@
                                 <label for="birthdate" class="block text-sm font-medium text-gray-700">
                                     F.Nacimiento
                                 </label>
-                                <input id="birthdate" type="date" name="birthdate" :value="old('birthdate')" required
+                                <x-input id="birthdate" type="date" name="birthdate" :value="old('birthdate')" required
                                     autofocus autocomplete="birthdate"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                             </div>
@@ -101,11 +101,11 @@
                                     Género
                                 </label>
                                 <div class="mt-4 flex items-center">
-                                    <input id="sex" name="sex" type="radio" value="0"
+                                    <x-input id="sex" name="sex" type="radio" value="0"
                                         class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500" required />
                                     <label for="sex"
                                         class="ml-3 block text-sm font-medium text-gray-700">Masculino</label>
-                                    <input id="sex" name="sex" type="radio" value="1"
+                                    <x-input id="sex" name="sex" type="radio" value="1"
                                         class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500 ml-6"
                                         required />
                                     <label for="sex"
@@ -116,7 +116,7 @@
                                 <label for="phone" class="block text-sm font-medium text-gray-700">
                                     Telefono
                                 </label>
-                                <input id="phone" type="text" name="phone" :value="old('phone')" required
+                                <x-input id="phone" type="number" name="phone" :value="old('phone')" required
                                     autofocus autocomplete="phone"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                             </div>
@@ -125,7 +125,7 @@
                                     Correo
                                 </label>
 
-                                <input id="email" type="email" name="email" :value="old('email')" required
+                                <x-input id="email" type="email" name="email" :value="old('email')" required
                                     autofocus autocomplete="email"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                             </div>
@@ -134,7 +134,7 @@
                                     Dirección
                                 </label>
 
-                                <input id="address" type="text" name="address" :value="old('address')" required
+                                <x-input id="address" type="text" name="address" :value="old('address')" required
                                     autofocus autocomplete="address"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                             </div>
@@ -142,7 +142,7 @@
                                 <label for="username" class="block text-sm font-medium text-gray-700"> Usuario
                                 </label>
 
-                                <input id="username" type="text" name="username" :value="old('username')"
+                                <x-input id="username" type="text" name="username" :value="old('username')"
                                     required autofocus autocomplete="username"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                             </div>
@@ -150,7 +150,7 @@
                                 <label for="Password" class="block text-sm font-medium text-gray-700"> Contraseña
                                 </label>
 
-                                <input type="password" id="password" name="password"
+                                <x-input type="password" id="password" name="password"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                             </div>
                             <div class="col-span-4 col-start-9 row-start-4">
@@ -158,14 +158,19 @@
                                     Confirmar contraseña
                                 </label>
 
-                                <input type="password" id="password_confirmation" name="password_confirmation"
+                                <x-input type="password" id="password_confirmation" name="password_confirmation"
                                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm" />
                             </div>
+
+
                         </div>
+                        <br>
+                        <!-- Muestra todos los mensajes de error de validación -->
+                        <x-validation-errors class="mb-4" />
 
                         <div class="col-span-6">
                             <label for="MarketingAccept" class="flex gap-4">
-                                <input type="checkbox" id="MarketingAccept" name="marketing_accept"
+                                <x-input type="checkbox" id="MarketingAccept" name="marketing_accept"
                                     class="size-5 rounded-md border-gray-200 bg-white shadow-sm" />
 
                                 <span class="text-sm text-gray-700">
