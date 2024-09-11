@@ -11,22 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('detalle_perstamos_libros', function (Blueprint $table) {
+        Schema::create('detalle_prestamos_libros', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('prestamos_libros_id');
+            $table->unsignedBigInteger('prestamos_libros_id'); // Nombre correcto de la columna
             $table->foreign('prestamos_libros_id')->references('id')->on('prestamos_libros')->onDelete('cascade');
 
             $table->unsignedBigInteger('libro_id');
             $table->foreign('libro_id')->references('id')->on('libros')->onDelete('cascade');
 
             $table->string('cantidad');
-            $table->string('comentarios');
+            $table->string('comentarios')->nullable();
 
             $table->timestamp('fecha_prestamo');
             $table->timestamp('fecha_devolucion');
 
             $table->timestamps();
         });
+
     }
 
     /**

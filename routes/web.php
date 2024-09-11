@@ -6,6 +6,7 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ShowlibrosController;
 use App\Http\Controllers\SolicitudLibroController;
+use App\Http\Controllers\MiSolicitudLibrosController;
 
 Route::get('/', [WelcomeController::class, 'index']);
 Route::get('search', SearchController::class)->name('search');
@@ -14,6 +15,8 @@ Route::resource('libros', ShowlibrosController::class)->names('libros');
 Route::middleware(['auth', 'auth.session'])->group(function () {
 
     Route::resource('solicitud-libros', SolicitudLibroController::class)->names('solicitud-libros');
+
+    Route::resource('mi-solicitud-libros', MiSolicitudLibrosController::class)->names('mi-solicitud-libros');
 });
 
 Route::middleware([
