@@ -209,8 +209,12 @@
                     @else
                         <div class=" flex flex-wrap items-center gap-x-1.5">
                             <a class="py-2 px-2.5 inline-flex items-center font-medium text-sm rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                                href="/login">
+                                href="{{route("login")}}">
                                 Iniciar sesión
+                            </a>
+                            <a class="py-2 px-2.5 inline-flex items-center font-medium text-sm rounded-lg    focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                                href="{{route("register")}}">
+                                    Registrase
                             </a>
                         </div>
                     @endauth
@@ -235,21 +239,21 @@
 
     <footer class="bg-white rounded-lg shadow m-4 ">
         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="#"
-                    class="hover:underline">Flowbite™</a>. All Rights Reserved.
+            <span class="text-sm text-gray-500 sm:text-center">© 2024 <a href="#"
+                    class="hover:underline"></a>.
             </span>
             <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    <a href="#" class="hover:underline me-4 md:me-6"></a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    <a href="#" class="hover:underline me-4 md:me-6"></a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                    <a href="#" class="hover:underline me-4 md:me-6"></a>
                 </li>
                 <li>
-                    <a href="#" class="hover:underline">Contact</a>
+                    <a href="#" class="hover:underline"></a>
                 </li>
             </ul>
         </div>

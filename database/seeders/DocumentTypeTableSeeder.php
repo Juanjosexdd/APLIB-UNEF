@@ -25,22 +25,22 @@ class DocumentTypeTableSeeder extends Seeder
             'abbreviation' => 'E'
         ]);
 
-        DocumentType::create([
-            'name'    => 'Rif',
-            'slug'      => 'rif',
-            'abbreviation' => 'R'
-        ]);
+        // DocumentType::create([
+        //     'name'    => 'Rif',
+        //     'slug'      => 'rif',
+        //     'abbreviation' => 'R'
+        // ]);
 
-        DocumentType::create([
-            'name'    => 'Juridico',
-            'slug'      => 'juridico',
-            'abbreviation' => 'J'
-        ]);
+        // DocumentType::create([
+        //     'name'    => 'Juridico',
+        //     'slug'      => 'juridico',
+        //     'abbreviation' => 'J'
+        // ]);
 
-        DocumentType::create([
-            'name'    => 'Gubernamental',
-            'slug'      => 'gubernamentañ',
-            'abbreviation' => 'G'
-        ]);
+        // DocumentType::create([
+        //     'name'    => 'Gubernamental',
+        //     'slug'      => 'gubernamentañ',
+        //     'abbreviation' => 'G'
+        // ]);
     }
 }

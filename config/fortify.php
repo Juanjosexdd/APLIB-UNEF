@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'username' => 'username',
+    'username' => 'identification_card',
 
     'email' => 'email',
 
