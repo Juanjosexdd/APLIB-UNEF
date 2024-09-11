@@ -15,7 +15,7 @@
             </div>
             <div>
                 <div class="inline-flex gap-x-2">
-                    <a class="bg-gray-800" href="{{route('mi-solicitud-libros.index')}}">
+                    <a class="inline-flex items-center px-2 py-1 bg-gray-800 border border-transparent rounded-md font-normal text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150" href="{{route('mi-solicitud-libros.index')}}">
                         <i class="fa-duotone fa-id-card"></i> Agregar
                     </a>
                 </div>
@@ -49,7 +49,7 @@
                             wire:click="order('descripcion')">
                             <div class="flex items-center gap-x-2 justify-between">
                                 <span class="text-xs font-semibold uppercase pl-4 tracking-wide text-gray-800">
-                                    Descripción
+                                    F. Prestamo
                                 </span>
                                 <div class="text-xs font-semibold">
                                     @if ($sort == 'descripcion')
@@ -68,7 +68,7 @@
                             wire:click="order('estatus')">
                             <div class="flex items-center gap-x-2 justify-between">
                                 <span class="text-xs font-semibold uppercase pl-4 tracking-wide text-gray-800">
-                                    Estatus
+                                    F. Devolución
                                 </span>
                                 <div class="text-xs font-semibold">
                                     @if ($sort == 'estatus')
@@ -86,7 +86,7 @@
                         <th scope="col" class="px-6 py-3 text-start">
                             <div class="flex items-center gap-x-2">
                                 <span class="text-xs font-semibold uppercase tracking-wide text-gray-800">
-                                    F. de Registro
+                                    F. de Solicitud
                                 </span>
                             </div>
                         </th>
@@ -100,17 +100,22 @@
                         <tr>
                             <td class="h-px w-72 whitespace-nowrap">
                                 <div class="px-6 py-3">
-                                    <span class="block text-sm text-gray-500"></span>
+                                    <span class="block text-sm text-gray-500">{{$missolicitude->user->name}}-{{$missolicitude->user->lastname}}</span>
                                 </div>
                             </td>
                             <td class="h-px w-72 whitespace-nowrap">
                                 <div class="px-6 py-3">
-                                    <span class="block text-sm text-gray-500"></span>
+                                    <span class="block text-sm text-gray-500">{{$missolicitude->fecha_prestamo}}</span>
                                 </div>
                             </td>
                             <td class="size-px whitespace-nowrap">
                                 <div class="px-6 py-3">
-                                    <span class="text-sm text-gray-500"></span>
+                                    <span class="text-sm text-gray-500">{{$missolicitude->fecha_devolucion}}</span>
+                                </div>
+                            </td>
+                            <td class="size-px whitespace-nowrap">
+                                <div class="px-6 py-3">
+                                    <span class="text-sm text-gray-500">{{$missolicitude->created_at}}</span>
                                 </div>
                             </td>
                             <td class="size-px whitespace-nowrap">

@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('nro_ejemplares');
             $table->string('procedencia');
             $table->string('estatus');
-            $table->string('condicion');
+            $table->string('condicion')->nullable();
             $table->string('observacion');
             $table->foreignId('subcategoria_id')->constrained();
             $table->foreignId('carrera_id')->constrained();

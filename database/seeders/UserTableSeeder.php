@@ -15,21 +15,23 @@ class UserTableSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'name' => 'Juan José',
-            'lastname' => 'Soto Peña',
-            'username' => 'JuanJosexD',
-            'slug' => 'juan-jose-soto-peña',
+            'name' => 'Administrador',
+            'lastname' => 'Sistema',
+            'username' => 'Administrador',
+            'slug' => 'administrador-sistema',
             'sex' => 1,
             'birthdate' => Carbon::now()->subYears(33),
-            'phone' => '+58 (412) 520-5105',
-            'address' => '12 Octubre, Calle 9 #415',
-            'email' => 'JuanJosexD@gmail.com',
+            'phone' => '+58 (412) 000-0000',
+            'address' => 'Araure centro',
+            'email' => 'administrador@gmail.com',
             'document_type_id' => 1,
             'type_user_id' => 1,
             'status_id' => 1,
-            'identification_card' => '20391877',
+            'identification_card' => '25961725',
             'password' => 'administrador',
         ])->assignRole('Administrador');
+
+
 
     }
 }

@@ -142,6 +142,7 @@ class ShowLibros extends Component
 
     public function edit(Libro $libro)
     {
+        dd($libro);
         $this->resetValidation();
         $this->libroId = $libro->id;
         $this->titulo = $libro->titulo;

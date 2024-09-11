@@ -183,11 +183,11 @@
                         <x-input id="autor" type="text" class="!py-1 !px-1.5 mt-1 block w-full" wire:model.live="autor" />
                         <x-input-error for="autor" class="mt-1" />
                     </div>
-                    <div class=" col-span-4">
+                    {{-- <div class=" col-span-4">
                         <x-label for="condicion" class="text-sm" value="{{ __('Condicion') }}" />
                         <x-input id="condicion" type="text" class="!py-1 !px-1.5 mt-1 block w-full" wire:model.live="condicion" />
                         <x-input-error for="condicion" class="mt-1" />
-                    </div>
+                    </div> --}}
 
                     <div class="row-star-3 col-span-6">
                         <x-label for="serial" class="text-sm" value="{{ __('Serial') }}" />
@@ -309,7 +309,7 @@
                     </div>
 
                     <!-- Edición -->
-                    <div class="row-start-2 col-span-4">
+                    <div class="row-start-2 col-span-6">
                         <x-label for="edicion" class="text-sm" value="{{ __('Edición') }}" />
                         <x-input id="edicion" type="text" class="!py-1 !px-1.5 mt-1 block w-full"
                                  wire:model.live="edicion" />
@@ -317,7 +317,7 @@
                     </div>
 
                     <!-- Autor -->
-                    <div class=" col-span-4">
+                    <div class=" col-span-6">
                         <x-label for="autor" class="text-sm" value="{{ __('Autor') }}" />
                         <x-input id="autor" type="text" class="!py-1 !px-1.5 mt-1 block w-full"
                                  wire:model.live="autor" />
@@ -325,12 +325,12 @@
                     </div>
 
                     <!-- Condición -->
-                    <div class=" col-span-4">
+                    {{-- <div class=" col-span-4">
                         <x-label for="condicion" class="text-sm" value="{{ __('Condición') }}" />
                         <x-input id="condicion" type="text" class="!py-1 !px-1.5 mt-1 block w-full"
                                  wire:model.live="condicion" />
                         <x-input-error for="condicion" class="mt-1" />
-                    </div>
+                    </div> --}}
 
                     <!-- Serial -->
                     <div class="row-star-3 col-span-4">

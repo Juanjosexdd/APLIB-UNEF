@@ -23,7 +23,7 @@ class CreateNewUser implements CreatesNewUsers
             'name' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
             'document_type_id' => ['required', 'integer'],
-            'identification_card' => ['required', 'string', 'max:255', 'unique:users'],
+            'identification_card' => ['required', 'string','min:6','max:255', 'unique:users'],
             'birthdate' => ['required', 'date'],
             'sex' => ['required', 'integer'],
             'phone' => ['required', 'string', 'max:255'],

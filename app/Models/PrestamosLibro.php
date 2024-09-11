@@ -17,4 +17,9 @@ class PrestamosLibro extends Model
     {
         return $this->hasMany(DetallePrestamosLibros::class, 'prestamos_libros_id');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
