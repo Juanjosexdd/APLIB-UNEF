@@ -46,7 +46,12 @@ dark:bg-neutral-800 dark:border-neutral-700
                     </li>
                     <li class="ccjr6 vme7x">
                         <x-sidebar-link href="{{ route('solicitud-libros.index') }}" :active="request()->routeIs('solicitud-libros.index')">
-                            <i class="fa-duotone fa-books fa-lg mt-0.5"></i> Solicitudes
+                            <i class="fa-duotone fa-books fa-lg mt-0.5"></i> Mis Solicitudes
+                        </x-sidebar-link>
+                    </li>
+                    <li class="ccjr6 vme7x">
+                        <x-sidebar-link href="{{ route('configuracion.solicitudes.index') }}" :active="request()->routeIs('configuracion.solicitudes.index')">
+                            <i class="fa-duotone fa-books fa-lg mt-0.5"></i> Todas las Solicitudes
                         </x-sidebar-link>
                     </li>
                     <li

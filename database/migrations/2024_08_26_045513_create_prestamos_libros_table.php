@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('prestamos_libros', function (Blueprint $table) {
             $table->id();
+            $table->string('slug');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('estatus');
             $table->timestamp('fecha_prestamo');

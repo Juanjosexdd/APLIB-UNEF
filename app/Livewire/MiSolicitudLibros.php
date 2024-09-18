@@ -21,6 +21,7 @@ class MiSolicitudLibros extends Component
     public $observacionGeneral = '';
     public $fechaMinimaDevolucion;
     public $fechaMaximaDevolucion;
+    public $numeroSolicitud; // Nueva propiedad para el número de solicitud
 
     const MAX_LIBROS = 3;
 
@@ -31,6 +32,10 @@ class MiSolicitudLibros extends Component
         // Inicializar con la fecha de hoy
         $this->fechaPrestamo = now()->toDateString();
         $this->actualizarRangoFechasDevolucion($this->fechaPrestamo);
+
+        // Obtener el número de la última solicitud y sumar 1
+        $ultimoPrestamo = PrestamosLibro::latest()->first();
+        $this->numeroSolicitud = $ultimoPrestamo ? $ultimoPrestamo->id + 1 : 1; // Si no hay registros, será el 1
     }
 
     public function updatedFechaPrestamo($value)

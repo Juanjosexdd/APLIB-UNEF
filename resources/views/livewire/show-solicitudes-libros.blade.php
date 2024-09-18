@@ -27,6 +27,25 @@
                 <thead class="bg-gray-50">
                     <tr>
                         <th scope="col" class="ps-6 lg:ps-3 xl:ps-0 pe-6 pl-4 py-3 text-start" role="button"
+                            wire:click="order('id')">
+                            <div class="flex items-center gap-x-2 justify-between">
+                                <span class="text-xs font-semibold uppercase pl-4 tracking-wide text-gray-800">
+                                    Nro.
+                                </span>
+                                <div class="text-xs font-semibold">
+                                    @if ($sort == 'id')
+                                        @if ($direction == 'asc')
+                                            <i class="fa-duotone fa-arrow-up-a-z"></i>
+                                        @else
+                                            <i class="fa-duotone fa-arrow-down-z-a"></i>
+                                        @endif
+                                    @else
+                                        <i class="fa-duotone fa-sort-up"></i>
+                                    @endif
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="ps-6 lg:ps-3 xl:ps-0 pe-6 pl-4 py-3 text-start" role="button"
                             wire:click="order('nombre')">
                             <div class="flex items-center gap-x-2 justify-between">
                                 <span class="text-xs font-semibold uppercase pl-4 tracking-wide text-gray-800">
@@ -90,6 +109,13 @@
                                 </span>
                             </div>
                         </th>
+                        <th scope="col" class="px-6 py-3 text-start">
+                            <div class="flex items-center gap-x-2">
+                                <span class="text-xs font-semibold uppercase tracking-wide text-gray-800">
+                                    Estatus
+                                </span>
+                            </div>
+                        </th>
 
                         <th scope="col" class="px-6 py-3 text-end"></th>
                     </tr>
@@ -98,6 +124,11 @@
                 <tbody class="divide-y divide-gray-200">
                     @foreach ($missolicitudes as $missolicitude)
                         <tr>
+                            <td class="size-px whitespace-nowrap">
+                                <div class="px-6 py-3">
+                                    <a href="#" class="text-sm text-sky-400/100 hover:underline">SOL-{{$missolicitude->id}}</a>
+                                </div>
+                            </td>
                             <td class="h-px w-72 whitespace-nowrap">
                                 <div class="px-6 py-3">
                                     <span class="block text-sm text-gray-500">{{$missolicitude->user->name}}-{{$missolicitude->user->lastname}}</span>
@@ -119,12 +150,17 @@
                                 </div>
                             </td>
                             <td class="size-px whitespace-nowrap">
+                                <div class="px-6 py-3">
+                                    <span class="text-sm text-gray-500">{{$missolicitude->estatus}}</span>
+                                </div>
+                            </td>
+                            <td class="size-px whitespace-nowrap">
                                 <div class="flex">
 
-                                    <a
+                                    {{-- <a
                                         class="cursor-pointer bg-gray-100 items-center py-2 px-2 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 mr-2">
                                         <i class="fa-duotone fa-pen-to-square"></i>
-                                    </a>
+                                    </a> --}}
                                     <a
                                         class=" items-center py-2 px-2 bg-gray-100 rounded-lg text-sm text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 cursor-pointer">
                                         <i class="fa-duotone fa-trash-can-plus"></i>

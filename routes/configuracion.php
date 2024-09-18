@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminSolicitudesController;
 use App\Http\Controllers\Configuracion\CarreraController;
 use App\Http\Controllers\Configuracion\CategoriaController;
 use App\Http\Controllers\Configuracion\DocumentTypeController;
@@ -15,3 +16,4 @@ Route::resource('categorias', CategoriaController::class)->names('configuracion.
 Route::resource('subcategorias', SubcategoriaController::class)->names('configuracion.subcategorias');
 Route::resource('carreras', CarreraController::class)->names('configuracion.carreras');
 Route::resource('libros', LibroController::class)->names('configuracion.libros');
+Route::resource('solicitudes', AdminSolicitudesController::class)->names('configuracion.solicitudes');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PrestamosLibro;
 use Illuminate\Http\Request;
 
 class SolicitudLibroController extends Controller
@@ -33,9 +34,9 @@ class SolicitudLibroController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(PrestamosLibro $missolicitude)
     {
-        //
+        return view('solicitud-libros.show',compact($missolicitude));
     }
 
     /**
